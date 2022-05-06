@@ -10,18 +10,19 @@ namespace ObjectCalc
     {
         static void Main(string[] args)
         {
-            Console.Write("Zadej 1. číslo: ");
-            double cislo1 = double.Parse(Console.ReadLine());
-            
-            Console.Write("Zadej 2. číslo: ");
-            double cislo2 = double.Parse(Console.ReadLine());
 
             Calculator calculator = new Calculator();
 
-            Console.WriteLine("Součet: " + calculator.Secti(cislo1, cislo2));
-            Console.WriteLine("Rozdíl: " + calculator.Odecti(cislo1, cislo2));
-            Console.WriteLine("Součin: " + calculator.Vynasob(cislo1, cislo2));
-            Console.WriteLine("Podíl : " + calculator.Vydel(cislo1, cislo2));
+            Console.Write("Zadej 1. číslo: ");
+            calculator.cislo1 = double.Parse(Console.ReadLine());
+            
+            Console.Write("Zadej 2. číslo: ");
+            calculator.cislo2 = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Součet: " + calculator.Secti());
+            Console.WriteLine("Rozdíl: " + calculator.Odecti());
+            Console.WriteLine("Součin: " + calculator.Vynasob());
+            Console.WriteLine("Podíl: " + calculator.Vydel());
             Console.ReadKey();
         }
     }
